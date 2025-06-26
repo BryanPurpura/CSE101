@@ -1,0 +1,26 @@
+Homework 3: Range searching with AVL trees:
+
+	*Author: Bryan Purpura
+	*Date: May 2025
+
+Files:
+
+	*main.cpp
+	*wordrange.cpp
+	*wordrange.h
+
+main.cpp:
+
+Contains the main function, which goes through each line in the input file, and inserts it, or does a range query on the Tree. It prints in the output file the count of nodes within the range,  each time there is a range query.
+
+wordrange.cpp:
+
+This file contains the many files I used for the coding problem. This includes an insert entry function call, which calls the recursice function to insert each node where it should, then on the walk back up the recursive stack, the function maintains balance by cheacking each nodes balance, and rotating if neccessary, all while updating nodes subtree size and height. There is also a range function, which is another pivotal function, which takes a begin value and end value for the range. It compares the current nodes value with the range values and makes recursive calls appropriately dependent on the comparisons. Also I added an algorithm, so that if the current value is within the range and so is its parent, then check if the current is less then or greater then the parent. This is because if it is less then the parent, lets say, then by the trees definition, the current nodes subtree is all in the range, saving me many recursive calls. In addtion, there are other function such as find, rotation functions, balance_factor, and updateNode.
+
+wordrange.h:
+
+Holds all the included libraries, along with the Node class, and function declarations. 
+
+## Credits:
+
+Got some code and inspiration for code from the test 3 BST files from this codio. Used it for find, Node definition in .h file, and a guide to start the insert function.
