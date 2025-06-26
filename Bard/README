@@ -1,0 +1,34 @@
+Homework 1: A Dramatic Analysis:
+
+	*Author: Bryan Purpura
+	*Date: April 2025
+
+Files I made:
+	
+	*bard.h
+	*bard_functs.c
+	*bard_main.c
+	*Makefile
+
+File 1: bard.h:
+
+This file contains all the header files and declarations of the two functions I created. I also declared the Array of linked lists called, "table". I inlcude at the start pragma once to avoid double inclusion wich could throw off the compiler. 
+
+File 2: bard_functs.c;
+
+In this file I created two functions.
+The first is void create_table(void). This function reads the input of the word file, then takes the length of the word. It then goes to that index in the array, and checks if the word is in the linked list using strcmp. If it is not in the linked list, create a new node, else it should increment the occurences of the word.
+The second function, void rank_ll(void), then goes through each linked list and ranks each word in it. To rank the words I simply went through the array, and for each linked list I compared each word to the rest of the linked list. If the current word has less occurences then a word in the linked list, I would increment the rank. Also if the word has the same occurences I would increment the rank if it came after lexographically.
+
+File 3: bard_main.c:
+
+The main file first calls both functions to create a array of linked lists, and give the words ranks. I then parse each line on the white space, and find the word in the linked list. If it is not there I output "-", else I print the word at that line. Lastly, I free the array of linked lists. 
+
+File 4: Makefile:
+
+Makes an executable "bard" by linking the object files together. Creates the object files by compiling with gcc. I also made a command "make clean" to get rid of object and executable files. 
+
+## Credits:
+
+I have written linked list code in my previous code which I have saved in my github, and I used some code as reference for this project.
+
