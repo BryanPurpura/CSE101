@@ -1,0 +1,11 @@
+Homework 4: Six Degrees of Kevin Bacon:
+
+	*Author: Bryan Purpura
+	*Date: June 2025
+Files:
+
+	*sixdegrees.cpp
+
+sixdegrees.cpp:
+
+This file contains all functions, libraries, classes for the graph, and the main function. My graph class contains the BFS function, that finds the shortest path to the other actor, and when found, goes back through the previous actors and there movies to print the path. The main function goes through the file, creating the graph, and then reads the two actors given, and prints to the output accordingly, either "Not present", if they are not found or no path exists, or the path if a path is found.
